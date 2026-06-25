@@ -5,20 +5,47 @@
   <title>Gideon Is 40</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: white;
+      color: black;
+      height: 300vh;
+    }
+
+    .text {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       font-size: 48px;
-      line-height: 1.15;
-      padding: 40px;
-      max-width: 900px;
+      line-height: 1.05;
+      text-align: center;
+      width: 90vw;
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
-  IS IT GIDEON'S 40TH BIRTHDAY<br>
-  OR ARE YOU JUST HAPPY TO SEE ME?<br>
-  <br>
+
+  <div class="text" id="text">
+    IS IT GIDEON'S<br>
+    40TH BIRTHDAY<br>
+    OR ARE YOU JUST<br>
+    HAPPY TO SEE ME?
+     <br>
   <br>
   <br>
   next clue is ______
+  </div>
+
+  <script>
+    window.addEventListener("scroll", function() {
+      const scrollAmount = window.scrollY;
+      const newSize = 48 + scrollAmount / 4;
+      document.getElementById("text").style.fontSize = newSize + "px";
+    });
+  </script>
+
 </body>
 </html>
+ 
